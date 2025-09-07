@@ -1,0 +1,32 @@
+<!-- HYFI logo (emblem) -->
+<svg width="32" height="32" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HYFI logo">
+  <defs>
+    <linearGradient id="hyfiDrop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00C2FF"/>
+      <stop offset="100%" stop-color="#0C6DFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- transparent background -->
+  <rect width="512" height="512" fill="none"/>
+
+  <!-- outer ring -->
+  <circle cx="280" cy="256" r="168" fill="none" stroke="#0C3D8F" stroke-width="22"/>
+
+  <!-- letter H -->
+  <g fill="#0C3D8F" transform="translate(180,156)">
+    <rect x="0"   y="0"  width="28" height="200" rx="6"/>
+    <rect x="124" y="0"  width="28" height="200" rx="6"/>
+    <rect x="24"  y="86" width="104" height="28" rx="6"/>
+  </g>
+
+  <!-- water droplet -->
+  <g transform="translate(110,156)">
+    <path d="M84,0 C70,28 44,58 28,86 C11,115 6,141 18,167 C29,192 54,210 84,210
+             C114,210 139,192 150,167 C162,141 157,115 140,86 C123,58 98,28 84,0 Z"
+          fill="url(#hyfiDrop)"/>
+    <!-- soft highlight -->
+    <path d="M70,40 C56,63 48,83 48,100 C48,118 57,131 73,138"
+          fill="none" stroke="#ffffff" stroke-width="8" opacity="0.35" stroke-linecap="round"/>
+  </g>
+</svg>
