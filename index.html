@@ -1,151 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HYDROFI • Official Website</title>
-    <meta name="description" content="HydroFi (HYFI) – eco‑minded crypto inspired by the power of water. White‑blue, clean UI." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/hyfi-logo-emblem.svg">
-    <style>
-      :root{
-        --bg:#ffffff; --ink:#0a1027; --muted:#5b6b86; --primary:#0C6DFF; --primary-2:#00C2FF; --line:#e8eef6; --card:#f9fbff;
-      }
-      *{box-sizing:border-box}
-      html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-      a{color:var(--primary);text-decoration:none}
-      a:hover{text-decoration:underline}
-      header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid var(--line);z-index:10}
-      .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-      .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-      .brand{display:flex;gap:.6rem;align-items:center;font-weight:800;letter-spacing:.3px}
-      .hyfi-mark{width:28px;height:28px;display:inline-block}
-      .menu a{margin-left:18px;color:var(--ink);opacity:.85}
-      .menu a:hover{opacity:1}
-      .hero{position:relative;padding:96px 0 32px;display:grid;gap:24px}
-      .wave{position:absolute;inset:0 0 auto 0;height:220px;z-index:-1;background:linear-gradient(180deg,rgba(0,194,255,.08),rgba(12,109,255,.05) 60%,transparent)}
-      .title{font-size:clamp(28px,6vw,52px);line-height:1.08;margin:0}
-      .lead{color:var(--muted);font-size:clamp(16px,2.4vw,19px)}
-      .cta{display:flex;gap:12px;flex-wrap:wrap}
-      .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:600;cursor:pointer}
-      .btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;box-shadow:0 10px 26px rgba(12,109,255,.25)}
-      .btn.ghost{background:white;color:var(--ink);border:1px solid var(--line)}
-      section{padding:56px 0}
-      h2{font-size:26px;margin:0 0 14px}
-      .muted{color:var(--muted)}
-      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
-      .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
-      .stat{font-size:22px;font-weight:800}
-      .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted)}
-      .dot{width:6px;height:6px;border-radius:999px;background:var(--primary)}
-      footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}
-    .brand-logo{width:32px;height:32px;display:inline-block;vertical-align:middle}
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="wrap nav">
-        <div class="brand">
-          <img src="assets/hyfi-logo-emblem.svg" alt="HYFI logo" width="56" height="56">
-          HYDROFI
-        </div>
-        <nav class="menu">
-          <a href="#about">About</a>
-          <a href="#environment">Environment</a>
-          <a href="#token">Token</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HydroFi (HYFI) — Whitepaper v1.0</title>
+  <style>
+    :root{--ink:#0a1027;--muted:#5b6b86;--line:#e8eef6;--acc:#0C6DFF;--acc2:#00C2FF;}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;padding:40px;color:var(--ink);background:#fff}
+    h1,h2,h3{margin:1.2rem 0 .6rem}
+    h1{font-size:32px}
+    h2{font-size:22px;border-bottom:1px solid var(--line);padding-bottom:.4rem;margin-top:2rem}
+    p,li{line-height:1.6}
+    .muted{color:var(--muted)}
+    a{color:var(--acc)}
+    code{background:#f5f7fb;border:1px solid var(--line);padding:.1rem .3rem;border-radius:6px}
+    .cover{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <h1>HydroFi (HYFI) — Whitepaper</h1>
+    <span class="pill">v1.0 · 2025-09-07</span>
+  </div>
 
-    <main class="wrap">
-      <section class="hero">
-        <div class="wave"></div>
-        <span class="badge"><span class="dot"></span> Powered by BNB Smart Chain</span>
-        <h1 class="title">Pure energy of water, clean blockchain technology: <span style="color:var(--primary)">HYFI</span>.</h1>
-        <p class="lead">HydroFi (HYFI) is a water‑inspired crypto project. White‑blue identity, focused on efficiency and transparency.</p>
-        <div class="cta">
-          <a class="btn primary" href="#token">View Token</a>
-        </div>
-        <div class="grid" style="margin-top:8px">
-          <div class="card"><div class="stat">100B</div><div class="muted">Total Supply</div></div>
-          <div class="card"><div class="stat">BEP‑20</div><div class="muted">BNB Smart Chain</div></div>
-          <div class="card"><div class="stat">Anti‑whale</div><div class="muted">maxTx 1% • maxWallet 2%</div></div>
-        </div>
-      </section>
+  <h2>Abstract</h2>
+  <p>HydroFi (HYFI) is a water-inspired, energy-aware cryptocurrency built on BNB Smart Chain (BEP-20). Our mission is to combine <strong>financial innovation</strong> with <strong>environmental responsibility</strong>, delivering a fast, affordable token with transparent mechanics, locked liquidity, and long-term founder vesting.</p>
 
-      <section id="about">
-        <h2>About HYFI</h2>
-        <p class="muted">HYFI combines liquidity and security with features such as transfer limits, transaction cooldowns, and founder locks. The code is transparent and designed for long‑term growth.</p>
-      </section>
+  <h2>Vision & Rationale</h2>
+  <p>Water sustains life through constant flow, clarity and renewability. HYFI brings these principles to crypto: efficient transactions, clean transparency and sustainable growth. We prioritise low resource usage, responsible token distribution and verifiable on-chain commitments.</p>
 
-      <section id="environment">
-        <h2>HYFI & Environment</h2>
-        <p><strong>HydroFi (HYFI)</strong> is a crypto project inspired by the natural power of water. Just as water enables life, HYFI brings flow, energy, and sustainability into the digital world. Our mission is to combine <strong>financial innovation</strong> with <strong>environmental responsibility</strong>:</p>
-        <ul>
-          <li>♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy‑efficient compared to traditional Proof‑of‑Work blockchains. This means a significantly smaller carbon footprint for every transaction.</li>
-          <li>💧 <strong>Supporting sustainable initiatives</strong> – Part of the ecosystem’s value can be directed towards green initiatives: water purification, renewable energy, and circular economy projects.</li>
-          <li>🌱 <strong>Transparency for nature and people</strong> – Just like clean water offers a clear view, HYFI ensures full transparency in transactions and project decisions.</li>
-          <li>🔵 <strong>A community that cares about the future</strong> – HYFI users are not only investors – they are part of a movement that promotes sustainability, innovation, and responsible growth.</li>
-        </ul>
-      </section>
+  <h2>Technology Overview</h2>
+  <ul>
+    <li><strong>Chain / Standard:</strong> BNB Smart Chain • BEP-20</li>
+    <li><strong>Token:</strong> HYFI (<code>0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9</code>)</li>
+    <li><strong>Total Supply:</strong> 100,000,000,000 HYFI (18 decimals)</li>
+    <li><strong>Core Features:</strong> Anti-whale limits (maxTx 1%, maxWallet 2%); optional transaction cooldown; blacklist-freeze; owner utilities (burnable/ownable/rescueTokens).</li>
+    <li><strong>Transparency:</strong> Contracts verifiable on BscScan; liquidity & founder allocations locked.</li>
+  </ul>
 
-      <section id="token">
-        <h2>Token & Links</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Basic Info</h3>
-            <ul>
-              <li><strong>Name:</strong> HydroFi</li>
-              <li><strong>Symbol:</strong> HYFI</li>
-              <li><strong>Standard:</strong> BEP‑20</li>
-              <li><strong>Total Supply:</strong> 100,000,000,000</li>
-              <li><strong>Contract:</strong> <a href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank">0xc28dF9E...2e9</a></li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Liquidity</h3>
-            <ul>
-              <li><a href="https://pancakeswap.finance/info/v2/pair/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank">PancakeSwap Pair</a></li>
-              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank">PinkLock (token lock)</a></li>
-              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348242" target="_blank">PinkLock (pair lock)</a></li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Founder Lock</h3>
-            <ul>
-              <li><a href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22" target="_blank">FounderLocker Contract</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
+  <h2>Environmental Focus</h2>
+  <ul>
+    <li><strong>Lower energy footprint:</strong> BNB Smart Chain is significantly more energy-efficient than PoW chains, reducing per-tx emissions.</li>
+    <li><strong>Support for green initiatives:</strong> Potential allocation for water purification, renewables and circular-economy pilots.</li>
+    <li><strong>Radical transparency:</strong> Clear on-chain records, public addresses and time-locked schedules.</li>
+  </ul>
 
-      <section id="roadmap">
-        <h2>Roadmap</h2>
-        <div class="grid">
-          <div class="card"><h3>Phase 1</h3><p>Deployment, community launch, code review, initial liquidity.</p></div>
-          <div class="card"><h3>Phase 2</h3><p>Partnerships, publications, documentation expansion, new tools.</p></div>
-          <div class="card"><h3>Phase 3</h3><p>Exchange listings, integrations, extended tokenomics, governance.</p></div>
-        </div>
-      </section>
+  <h2>Tokenomics</h2>
+  <ul>
+    <li><strong>Total Supply:</strong> 100,000,000,000 HYFI</li>
+    <li><strong>Liquidity:</strong> Locked via PinkLock — <a href="https://www.pinksale.finance/pinklock/bsc/record/1348644">token lock</a>, <a href="https://www.pinksale.finance/pinklock/bsc/record/1348242">pair lock</a>.</li>
+    <li><strong>Founder Vesting:</strong> <a href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22">FounderLocker</a> — 200M HYFI per partner every 30 days, 12-month cliff, 36-month duration.</li>
+    <li><strong>Community / Treasury / Marketing:</strong> To be published with on-chain references.</li>
+  </ul>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email us at <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a>. Follow us on <a href="#">GitHub</a> and <a href="#">X</a>.</p>
-      </section>
+  <h2>Mechanics & Protections</h2>
+  <ul>
+    <li>Trading enablement after initial setup & liquidity.</li>
+    <li>Anti-whale tx and wallet limits.</li>
+    <li>Optional cooldown to mitigate bots.</li>
+    <li>Blacklist-freeze to improve governance certainty.</li>
+    <li>Third-party reviews & audits (to be published).</li>
+  </ul>
 
-      <footer>
-        <div class="wrap">
-          © <span id="year"></span> HYDROFI • Built with 💧 
-        </div>
-      </footer>
-    </main>
+  <h2>Roadmap (Condensed)</h2>
+  <div class="grid">
+    <div><h3>Phase 1 – Launch & Foundations</h3><p>Deployment, initial liquidity, contract verification, website & whitepaper.</p></div>
+    <div><h3>Phase 2 – Growth</h3><p>Partnerships, analytics/DEX tooling, expanded documentation, community grants.</p></div>
+    <div><h3>Phase 3 – Scale</h3><p>Exchange integrations, governance model, green-initiative grants, broadened utility.</p></div>
+  </div>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <h2>Governance & Security</h2>
+  <ul>
+    <li>Recommended multisig and timelocks for sensitive operations.</li>
+    <li>Public release of any parameter changes; immutable on-chain records.</li>
+    <li>Compliance with local regulations and security best practices.</li>
+  </ul>
+
+  <h2>Official Links</h2>
+  <ul>
+    <li><strong>Website:</strong> hydrofi-hyfi.com</li>
+    <li><strong>Token (BscScan):</strong> <a href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9">0xc28d...2e9</a></li>
+    <li><strong>PancakeSwap Pair:</strong> <a href="https://pancakeswap.finance/info/v2/pair/0x9247411Ddbd75c809193d7bF1d1102f98F99A211">0x9247...A211</a></li>
+    <li><strong>PinkLock (Token):</strong> <a href="https://www.pinksale.finance/pinklock/bsc/record/1348644">link</a></li>
+    <li><strong>PinkLock (Pair):</strong> <a href="https://www.pinksale.finance/pinklock/bsc/record/1348242">link</a></li>
+    <li><strong>FounderLocker:</strong> <a href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22">0x96c0...BA22</a></li>
+    <li><strong>Contact:</strong> <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a></li>
+  </ul>
+
+  <h2>Disclaimer</h2>
+  <p class="muted">This document is for informational purposes only and does not constitute financial, legal or tax advice. Digital assets involve risk. HYFI makes no guarantees of price performance. Always do your own research and comply with applicable laws.</p>
+</body>
 </html>
