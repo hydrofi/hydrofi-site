@@ -1,1 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HydroFi (HYFI) — Whitepaper v1.0</title>
+  <style>
+    :root{--ink:#0a1027;--muted:#5b6b86;--line:#e8eef6;--acc:#0C6DFF;--acc2:#00C2FF;}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;padding:40px;color:var(--ink);background:#fff}
+    h1,h2,h3{margin:1.2rem 0 .6rem}
+    h1{font-size:32px}
+    h2{font-size:22px;border-bottom:1px solid var(--line);padding-bottom:.4rem;margin-top:2rem}
+    p,li{line-height:1.6}
+    .muted{color:var(--muted)}
+    a{color:var(--acc)}
+    code{background:#f5f7fb;border:1px solid var(--line);padding:.1rem .3rem;border-radius:6px}
+    .cover{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <h1>HydroFi (HYFI) — Whitepaper</h1>
+    <span class="pill">v1.0 · 2025-09-07</span>
+  </div>
+
+  <h2>Abstract</h2>
+  <p>HydroFi (HYFI) is a water-inspired, energy-aware cryptocurrency built on BNB Smart Chain (BEP-20). Our mission is to combine <strong>financial innovation</strong> with <strong>environmental responsibility</strong>, delivering a fast, affordable token with transparent mechanics, locked liquidity, and long-term founder vesting.</p>
+
+  <h2>Vision & Rationale</h2>
+  <p>Water sustains life through constant flow, clarity and renewability. HYFI brings these principles to crypto: efficient transactions, clean transparency and sustainable growth. We prioritise low resource usage, responsible token distribution and verifiable on-chain commitments.</p>
+
+  <h2>Technology Overview</h2>
+  <ul>
+    <li><strong>Chain / Standard:</strong> BNB Smart Chain • BEP-20</li>
+    <li><strong>Token:</strong> HYFI (<code>0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9</code>)</li>
+    <li><strong>Total Supply:</strong> 100,000,000,000 HYFI (18 decimals)</li>
+    <li><strong>Core Features:</strong> Anti-whale limits (maxTx 1%, maxWallet 2%); optional transaction cooldown; blacklist-freeze; owner utilities (burnable/ownable/rescueTokens).</li>
+    <li><strong>Transparency:</strong> Contracts verifiable on BscScan; liquidity & founder allocations locked.</li>
+  </ul>
+
+  <h2>Environmental Focus</h2>
+  <ul>
+    <li><strong>Lower energy footprint:</strong> BNB Smart Chain is significantly more energy-efficient than PoW chains, reducing per-tx emissions.</li>
+    <li><strong>Support for green initiatives:</strong> Potential allocation for water purification, renewables and circular-economy pilots.</li>
+    <li><strong>Radical transparency:</strong> Clear on-chain records, public addresses and time-locked schedules.</li>
+  </ul>
+
+  <h2>Tokenomics</h2>
+  <ul>
+    <li><strong>Total Supply:</strong> 100,000,000,000 HYFI</li>
+    <li><strong>Liquidity:</strong> Locked via PinkLock — <a href="https://www.pinksale.finance/pinklock/bsc/record/1348644">token lock</a>, <a href="https://www.pinksale.finance/pinklock/bsc/record/1348242">pair lock</a>.</li>
+    <li><strong>Founder Vesting:</strong> <a href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22">FounderLocker</a> — 200M HYFI per partner every 30 days, 12-month cliff, 36-month duration.</li>
+    <li><strong>Community / Treasury / Marketing:</strong> To be published with on-chain references.</li>
+  </ul>
+
+  <h2>Mechanics & Protections</h2>
+  <ul>
+    <li>Trading enablement after initial setup & liquidity.</li>
+    <li>Anti-whale tx and wallet limits.</li>
+    <li>Optional cooldown to mitigate bots.</li>
+    <li>Blacklist-freeze to improve governance certainty.</li>
+    <li>Third-party reviews & audits (to be published).</li>
+  </ul>
+
+  <h2>Roadmap (Condensed)</h2>
+  <div class="grid">
+    <div><h3>Phase 1 – Launch & Foundations</h3><p>Deployment, initial liquidity, contract verification, website & whitepaper.</p></div>
+    <div><h3>Phase 2 – Growth</h3><p>Partnerships, analytics/DEX tooling, expanded documentation, community grants.</p></div>
+    <div><h3>Phase 3 – Scale</h3><p>Exchange integrations, governance model, green-initiative grants, broadened utility.</p></div>
+  </div>
+
+  <h2>Governance & Security</h2>
+  <ul>
+    <li>Recommended multisig and timelocks for sensitive operations.</li>
+    <li>Public release of any parameter changes; immutable on-chain records.</li>
+    <li>Compliance with local regulations and security best practices.</li>
+  </ul>
+
+  <h2>Official Links</h2>
+  <ul>
+    <li><strong>Website:</strong> hydrofi-hyfi.com</li>
+    <li><strong>Token (BscScan):</strong> <a href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9">0xc28d...2e9</a></li>
+    <li><strong>PancakeSwap Pair:</strong> <a href="https://pancakeswap.finance/info/v2/pair/0x9247411Ddbd75c809193d7bF1d1102f98F99A211">0x9247...A211</a></li>
+    <li><strong>PinkLock (Token):</strong> <a href="https://www.pinksale.finance/pinklock/bsc/record/1348644">link</a></li>
+    <li><strong>PinkLock (Pair):</strong> <a href="https://www.pinksale.finance/pinklock/bsc/record/1348242">link</a></li>
+    <li><strong>FounderLocker:</strong> <a href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22">0x96c0...BA22</a></li>
+    <li><strong>Contact:</strong> <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a></li>
+  </ul>
+
+  <h2>Disclaimer</h2>
+  <p class="muted">This document is for informational purposes only and does not constitute financial, legal or tax advice. Digital assets involve risk. HYFI makes no guarantees of price performance. Always do your own research and comply with applicable laws.</p>
+</body>
+</html>
 
