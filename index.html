@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HYDROFI • Uradna stran</title>
+    <meta name="description" content="Elegantna bela-modra enostranska stran za HydroFi (HYFI). Pripravljena za GitHub Pages." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#ffffff; --ink:#0a1027; --muted:#5b6b86; --primary:#0C6DFF; --primary-2:#00C2FF; --line:#e8eef6; --card:#f9fbff;
+      }
+      *{box-sizing:border-box}
+      html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+      a{color:var(--primary);text-decoration:none}
+      a:hover{text-decoration:underline}
+      header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid var(--line);z-index:10}
+      .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+      .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+      .brand{display:flex;gap:.75rem;align-items:center;font-weight:800;letter-spacing:.3px}
+      .logo{width:30px;height:30px;border-radius:8px;background:conic-gradient(from 210deg,var(--primary),var(--primary-2));box-shadow:0 8px 24px rgba(12,109,255,.18)}
+      .menu a{margin-left:18px;color:var(--ink);opacity:.85}
+      .menu a:hover{opacity:1}
+      .hero{position:relative;padding:96px 0 32px;display:grid;gap:24px}
+      .wave{position:absolute;inset:0 0 auto 0;height:220px;z-index:-1;background:linear-gradient(180deg,rgba(0,194,255,.08),rgba(12,109,255,.05) 60%,transparent)}
+      .title{font-size:clamp(28px,6vw,52px);line-height:1.08;margin:0}
+      .lead{color:var(--muted);font-size:clamp(16px,2.4vw,19px)}
+      .cta{display:flex;gap:12px;flex-wrap:wrap}
+      .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:600;cursor:pointer}
+      .btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;box-shadow:0 10px 26px rgba(12,109,255,.25)}
+      .btn.ghost{background:white;color:var(--ink);border:1px solid var(--line)}
+      section{padding:56px 0}
+      h2{font-size:26px;margin:0 0 14px}
+      .muted{color:var(--muted)}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+      .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+      .stat{font-size:22px;font-weight:800}
+      .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted)}
+      .dot{width:6px;height:6px;border-radius:999px;background:var(--primary)}
+      footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}
+      .code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#0b1226;color:#eaf2ff;border-radius:12px;padding:14px;overflow:auto}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <div class="brand"><span class="logo"></span>HYDROFI</div>
+        <nav class="menu">
+          <a href="#about">O HYFI</a>
+          <a href="#token">Token</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div class="wave"></div>
+        <span class="badge"><span class="dot"></span> Na voljo na BNB Smart Chain</span>
+        <h1 class="title">Čista energija vode, čista tehnologija verige: <span style="color:var(--primary)">HYFI</span>.</h1>
+        <p class="lead">HydroFi (HYFI) je vodno navdihnjen kripto projekt. Bela-modra identiteta, osredotočenost na učinkovitost in transparentnost.</p>
+        <div class="cta">
+          <a class="btn primary" href="#token">Poglej token</a>
+          <a class="btn ghost" href="#setup">Objavi na GitHub Pages</a>
+        </div>
+        <div class="grid" style="margin-top:8px">
+          <div class="card"><div class="stat">100B</div><div class="muted">Skupna zaloga HYFI</div></div>
+          <div class="card"><div class="stat">BEP‑20</div><div class="muted">Na BNB Smart Chain</div></div>
+          <div class="card"><div class="stat">Anti‑whale</div><div class="muted">maxTx 1% • maxWallet 2%</div></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>O HYFI</h2>
+        <p class="muted">HYFI združuje likvidnost in varnost s funkcijami, kot so omejitve prenosov, čakalna doba med transakcijami in zaklep za ustanovitelje. Koda je pregledna in primerna za dolgoročni razvoj.</p>
+      </section>
+
+      <section id="token">
+        <h2>Token in povezave</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Osnovno</h3>
+            <ul>
+              <li><strong>Ime:</strong> HydroFi</li>
+              <li><strong>Simbol:</strong> HYFI</li>
+              <li><strong>Standard:</strong> BEP‑20</li>
+              <li><strong>Skupna zaloga:</strong> 100,000,000,000</li>
+              <li><strong>Pogodba:</strong> <a href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank">0xc28dF9E...2e9</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Likvidnost</h3>
+            <ul>
+              <li><a href="https://pancakeswap.finance/info/v2/pair/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank">PancakeSwap par</a></li>
+              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank">PinkLock (token lock)</a></li>
+              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348242" target="_blank">PinkLock (pair lock)</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Zaklep ustanoviteljev</h3>
+            <ul>
+              <li><a href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22" target="_blank">FounderLocker pogodba</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <h2>Roadmap</h2>
+        <div class="grid">
+          <div class="card"><h3>Faza 1</h3><p>Deploy, osnovna skupnost, pregled kode, začetna likvidnost.</p></div>
+          <div class="card"><h3>Faza 2</h3><p>Partnerstva, objave, širitev dokumentacije, dodatna orodja.</p></div>
+          <div class="card"><h3>Faza 3</h3><p>Borze, integracije, razširjena tokenomika, upravljanje.</p></div>
+        </div>
+      </section>
+
+      <section id="setup">
+        <h2>GitHub Pages – hiter začetek</h2>
+        <ol>
+          <li>Ustvari repozitorij (npr. <strong>username.github.io</strong> ali projektni repo).</li>
+          <li>Dodaj to datoteko kot <code>index.html</code> v koren (ali <code>/docs</code>).</li>
+          <li>V nastavitvah vklopi <strong>Pages</strong> in izberi vejo <code>main</code> ter mapo <code>/</code> ali <code>/docs</code>.</li>
+        </ol>
+        <div class="code"><pre><code>git init
+git add index.html
+git commit -m "HYFI stran"
+git branch -M main
+git remote add origin https://github.com/UPORABNIK/HYFI-STRAN.git
+git push -u origin main</code></pre></div>
+      </section>
+
+      <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Piši nam na <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a> ali nas spremljaj na <a href="#">GitHub</a> in <a href="#">X</a>.</p>
+      </section>
+
+      <footer>
+        <div class="wrap">
+          © <span id="year"></span> HYDROFI • Zgrajeno z 💧 na GitHub Pages
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
