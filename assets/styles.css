@@ -10,38 +10,49 @@ html,body{
   margin:0; padding:0;
   font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 a{color:var(--primary); text-decoration:none}
 a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--primary-2); outline-offset:2px}
 
-/* Header */
+/* =================== Header =================== */
 header{
   position:sticky; top:0;
   backdrop-filter:saturate(1.2) blur(8px);
-  background:rgba(255,255,255,.8);
+  background:rgba(255,255,255,.85);
   border-bottom:1px solid var(--line); z-index:10;
 }
 .wrap{max-width:1120px; margin:0 auto; padding:0 20px}
 .nav{display:flex; align-items:center; justify-content:space-between; height:96px}
 .brand{display:flex; gap:1rem; align-items:center; font-weight:800; letter-spacing:.3px}
 .brand-logo{width:72px; height:72px; display:inline-block; vertical-align:middle}
-.menu a{margin-left:18px; color:var(--ink); opacity:.85}
+.menu a{margin-left:18px; color:var(--ink); opacity:.85; font-weight:600}
 .menu a:hover{opacity:1}
 
-/* Hero */
+/* ==================== Hero ==================== */
 .hero{position:relative; padding:96px 0 32px; display:grid; gap:24px}
 .wave{position:absolute; inset:0 0 auto 0; height:220px; z-index:-1;
   background:linear-gradient(180deg,rgba(0,194,255,.08),rgba(12,109,255,.05) 60%,transparent)}
 .title{font-size:clamp(28px,6vw,52px); line-height:1.08; margin:0}
 .lead{color:var(--muted); font-size:clamp(16px,2.4vw,19px)}
 
-/* Buttons */
+/* ================== Buttons =================== */
 .cta{display:flex; gap:12px; flex-wrap:wrap}
-.btn{appearance:none; border:0; border-radius:14px; padding:12px 18px; font-weight:600; cursor:pointer}
-.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2)); color:#fff; box-shadow:0 10px 26px rgba(12,109,255,.25)}
+.btn{
+  appearance:none; border:0; border-radius:14px;
+  padding:12px 18px; font-weight:600; cursor:pointer;
+  transition:transform .06s ease, box-shadow .2s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn.primary{
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff; box-shadow:0 10px 26px rgba(12,109,255,.25)
+}
+.btn.primary:hover{box-shadow:0 12px 30px rgba(12,109,255,.32)}
 .btn.ghost{background:#fff; color:var(--ink); border:1px solid var(--line)}
 
-/* Sections & cards */
+/* ============ Sections & cards ============ */
 section{padding:56px 0}
 h2{font-size:26px; margin:0 0 14px}
 .muted{color:var(--muted)}
@@ -51,16 +62,34 @@ h2{font-size:26px; margin:0 0 14px}
 .badge{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:999px; padding:8px 12px; color:var(--muted)}
 .dot{width:6px; height:6px; border-radius:999px; background:var(--primary)}
 
-/* Footer */
-footer{padding:40px 0; border-top:1px solid var(--line); color:var(--muted)}
+/* ============ Token & Links layout ============ */
+.token-grid .card{padding:22px}
+.card h3{margin:0 0 12px; font-size:18px}
 
-/* Environment section – bolj “zračno” */
+.card ul{list-style:none; padding:0; margin:0}
+.card ul li{margin:8px 0}
+
+/* “key : value” poravnava v Basic Info */
+.card ul.kv li{display:flex; gap:10px; align-items:baseline}
+.card ul.kv li span{
+  min-width:140px;            /* stolpec s ključi */
+  font-weight:600; color:var(--ink);
+}
+.card ul a{font-weight:600}
+
+/* ============ Environment spacing ============ */
 #environment p, #environment li{ line-height:1.85; }
 #environment ul{ margin-top:10px; padding-left:1.2rem; }
 #environment li{ margin:10px 0; }
 
-/* Responsive tweaks */
+/* =================== Footer =================== */
+footer{padding:40px 0; border-top:1px solid var(--line); color:var(--muted)}
+
+/* ============== Responsive tweaks ============== */
 @media (max-width:640px){
   .brand-logo{width:48px; height:48px}
   .nav{height:80px}
+}
+@media (min-width:1100px){
+  .token-grid{grid-template-columns:repeat(3,1fr)}
 }
