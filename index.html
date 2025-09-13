@@ -6,18 +6,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HYDROFI • Official Website</title>
-    <meta name="description" content="HydroFi (HYFI) – eco‑minded crypto inspired by the power of water. White‑blue, clean UI." />
+    <meta name="description" content="HydroFi (HYFI) – eco-minded crypto inspired by the power of water. White-blue, clean UI." />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/svg+xml" href="assets/hyfi-logo-emblem.svg">
+
     <style>
       :root{
-        --bg:#ffffff; --ink:#0a1027; --muted:#5b6b86; --primary:#0C6DFF; --primary-2:#00C2FF; --line:#e8eef6; --card:#f9fbff;
+        --bg:#ffffff; --ink:#0a1027; --muted:#5b6b86;
+        --primary:#0C6DFF; --primary-2:#00C2FF;
+        --line:#e8eef6; --card:#f9fbff;
       }
       *{box-sizing:border-box}
       html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
@@ -25,19 +26,22 @@
       a:hover{text-decoration:underline}
       header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid var(--line);z-index:10}
       .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-      .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-      .brand{display:flex;gap:.6rem;align-items:center;font-weight:800;letter-spacing:.3px}
-      .hyfi-mark{width:28px;height:28px;display:inline-block}
+      .nav{display:flex;align-items:center;justify-content:space-between;height:96px}
+      .brand{display:flex;gap:1rem;align-items:center;font-weight:800;letter-spacing:.3px}
+      .brand-logo{width:72px;height:72px;display:inline-block;vertical-align:middle}
       .menu a{margin-left:18px;color:var(--ink);opacity:.85}
       .menu a:hover{opacity:1}
+
       .hero{position:relative;padding:96px 0 32px;display:grid;gap:24px}
       .wave{position:absolute;inset:0 0 auto 0;height:220px;z-index:-1;background:linear-gradient(180deg,rgba(0,194,255,.08),rgba(12,109,255,.05) 60%,transparent)}
       .title{font-size:clamp(28px,6vw,52px);line-height:1.08;margin:0}
       .lead{color:var(--muted);font-size:clamp(16px,2.4vw,19px)}
+
       .cta{display:flex;gap:12px;flex-wrap:wrap}
       .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:600;cursor:pointer}
       .btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;box-shadow:0 10px 26px rgba(12,109,255,.25)}
       .btn.ghost{background:white;color:var(--ink);border:1px solid var(--line)}
+
       section{padding:56px 0}
       h2{font-size:26px;margin:0 0 14px}
       .muted{color:var(--muted)}
@@ -47,11 +51,58 @@
       .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted)}
       .dot{width:6px;height:6px;border-radius:999px;background:var(--primary)}
       footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}
-    .brand-logo{width:72px;height:72px;display:inline-block;vertical-align:middle}
-      .nav{height:96px}
-      .brand{gap:1rem}
+
+      /* ===== Token & Links — cleaner, flatter (blue/white) ===== */
+      .token-clean { padding-top: 40px; }
+      .token-clean .hint { color:#1e429f; opacity:.9; margin:0 0 8px; }
+      .token-clean .note { color:#1e429f; opacity:.7; font-size:12px; margin-top:8px; }
+
+      .tgrid { display:grid; gap:16px; }
+      @media (min-width: 1024px){ .tgrid{ grid-template-columns: repeat(3,1fr); gap:20px; } }
+
+      .tcard { background:#fff; border:1px solid #d6e5ff; border-radius:14px; padding:18px; box-shadow:none; }
+      .tcard-title { font-size:16px; font-weight:700; margin:0 0 10px; }
+
+      /* 2-col key:value grid */
+      .kv2 { display:grid; grid-template-columns: 1fr 1fr; gap:10px 14px; }
+      .kv2 div { display:flex; justify-content:space-between; gap:12px; }
+      .kv2 span { color:#2a5bd6; opacity:.95; font-size:.92rem; }
+      .kv2 strong { font-weight:700; }
+
+      .pill { background:#eef4ff; color:#163c8c; border:1px solid #dbe7ff; padding:.1rem .5rem; border-radius:999px; font-size:.78rem; }
+
+      .tsep { border:0; height:1px; background:#e3efff; margin:10px 0; }
+
+      .row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:8px 0; }
+      .lbl { min-width:96px; color:#2a5bd6; font-size:.92rem; }
+
+      .chips { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+      .chip { background:#eef4ff; border:1px solid #dbe7ff; color:#0a1027; border-radius:8px; padding:.25rem .5rem; font-size:.8rem; }
+      .iconbtn { width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center; border:1px solid #d6e5ff; border-radius:8px; background:#fff; cursor:pointer; }
+      .iconbtn:hover { background:#eef4ff; border-color:#c6dbff; }
+
+      .linkbtn { display:inline-flex; align-items:center; gap:6px; border:1px solid #d6e5ff; border-radius:10px; padding:.45rem .7rem; text-decoration:none; color:#0a1027; background:#fff; }
+      .linkbtn:hover { background:#eef4ff; border-color:#c6dbff; }
+      .linkbtn.strong { font-weight:700; }
+
+      .cta.token { margin:0 }
+      .cta + .llinks{ margin-top:6px }
+
+      .cta { display:inline-flex; align-items:center; justify-content:center; width:100%; padding:.6rem .9rem; font-weight:700; border-radius:12px; background:#2563eb; color:#fff; text-decoration:none; margin:4px 0 10px; }
+      .cta:hover { background:#1d4ed8; }
+
+      .llinks { list-style:none; padding:0; margin:6px 0 0; display:flex; flex-direction:column; gap:6px; }
+      .llinks a { padding:.35rem .4rem; border-radius:8px; border:1px solid transparent; color:#0a1027; text-decoration:none; }
+      .llinks a:hover { background:#eef4ff; border-color:#d6e5ff; }
+
+      /* Verified badge + hero copy */
+      .verified{ display:inline-flex; align-items:center; gap:6px; font-weight:600; color:#0a7f2e; background:#e9f9ef; border:1px solid #c4efcf; border-radius:999px; padding:10px 12px; }
+      .verified .check{ width:16px; height:16px; }
+      #hero-copy{ border:1px solid var(--line); }
+      #hero-copy.copied{ color:#0a7f2e; border-color:#c4efcf; background:#e9f9ef; }
     </style>
   </head>
+
   <body>
     <header>
       <div class="wrap nav">
@@ -74,110 +125,124 @@
         <div class="wave"></div>
         <span class="badge"><span class="dot"></span> Powered by BNB Smart Chain</span>
         <h1 class="title">Pure energy of water, clean blockchain technology: <span style="color:var(--primary)">HYFI</span>.</h1>
-        <p class="lead">HydroFi (HYFI) is a water‑inspired crypto project. White‑blue identity, focused on efficiency and transparency.</p>
+        <p class="lead">HydroFi (HYFI) is a water-inspired crypto project. White-blue identity, focused on efficiency and transparency.</p>
+
+        <!-- HERO CTA + NEW: Copy + Verified -->
         <div class="cta">
           <a class="btn primary" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener">View Token on BscScan</a>
           <a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+
+          <button class="btn ghost" id="hero-copy">Copy contract</button>
+          <span class="verified">
+            <svg class="check" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Verified on BscScan
+          </span>
         </div>
+
         <div class="grid" style="margin-top:8px">
           <div class="card"><div class="stat">100B</div><div class="muted">Total Supply</div></div>
-          <div class="card"><div class="stat">BEP‑20</div><div class="muted">BNB Smart Chain</div></div>
-          <div class="card"><div class="stat">Anti‑whale</div><div class="muted">maxTx 1% • maxWallet 2%</div></div>
+          <div class="card"><div class="stat">BEP-20</div><div class="muted">BNB Smart Chain</div></div>
+          <div class="card"><div class="stat">Anti-whale</div><div class="muted">maxTx 1% • maxWallet 2%</div></div>
         </div>
       </section>
 
       <section id="about">
         <h2>About HYFI</h2>
-        <p class="muted">HYFI combines liquidity and security with features such as transfer limits, transaction cooldowns, and founder locks. The code is transparent and designed for long‑term growth.</p>
+        <p class="muted">HYFI combines liquidity and security with features such as transfer limits, transaction cooldowns, and founder locks. The code is transparent and designed for long-term growth.</p>
       </section>
 
       <section id="environment">
         <h2>HYFI & Environment</h2>
         <p><strong>HydroFi (HYFI)</strong> is a crypto project inspired by the natural power of water. Just as water enables life, HYFI brings flow, energy, and sustainability into the digital world. Our mission is to combine <strong>financial innovation</strong> with <strong>environmental responsibility</strong>:</p>
         <ul>
-          <li>♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy‑efficient compared to traditional Proof‑of‑Work blockchains. This means a significantly smaller carbon footprint for every transaction.</li>
+          <li>♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy-efficient compared to traditional Proof-of-Work blockchains. This means a significantly smaller carbon footprint for every transaction.</li>
+          
           <li>💧 <strong>Supporting sustainable initiatives</strong> – Part of the ecosystem’s value can be directed towards green initiatives: water purification, renewable energy, and circular economy projects.</li>
+          
           <li>🌱 <strong>Transparency for nature and people</strong> – Just like clean water offers a clear view, HYFI ensures full transparency in transactions and project decisions.</li>
+          
           <li>🔵 <strong>A community that cares about the future</strong> – HYFI users are not only investors – they are part of a movement that promotes sustainability, innovation, and responsible growth.</li>
         </ul>
       </section>
 
-<section id="token" class="token-clean">
-  <div class="token-head">
-    <h2>Token & Links</h2>
-    <p class="hint">Everything you need at a glance.</p>
-  </div>
-
-  <div class="tgrid">
-    <!-- Basic Info -->
-    <div class="tcard">
-      <h3 class="tcard-title">Basic Info</h3>
-
-      <div class="kv2">
-        <div><span>Name</span><strong>HydroFi</strong></div>
-        <div><span>Symbol</span><strong class="pill">HYFI</strong></div>
-        <div><span>Standard</span><strong>BEP-20</strong></div>
-        <div><span>Total Supply</span><strong>100,000,000,000</strong></div>
-      </div>
-
-      <hr class="tsep">
-
-      <div class="row">
-        <span class="lbl">Contract</span>
-        <div class="chips">
-          <code id="hyfi-contract" class="chip">0xc28dF9Eb…2e9</code>
-          <button id="hyfi-copy" class="iconbtn" aria-label="Copy">
-            <!-- copy icon -->
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-              <rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <rect x="4" y="4" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </button>
+      <!-- ===== Token & Links (clean) ===== -->
+      <section id="token" class="token-clean">
+        <div class="token-head">
+          <h2>Token & Links</h2>
+          <p class="hint">Everything you need at a glance.</p>
         </div>
-      </div>
 
-      <div class="row">
-        <span class="lbl">Explorer</span>
-        <a class="linkbtn" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
-          View on BscScan
-        </a>
-      </div>
+        <div class="tgrid">
+          <!-- Basic Info -->
+          <div class="tcard">
+            <h3 class="tcard-title">Basic Info</h3>
 
-      <div class="row">
-        <span class="lbl">Whitepaper</span>
-        <a class="linkbtn" href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noreferrer">
-          Open
-        </a>
-      </div>
-    </div>
+            <div class="kv2">
+              <div><span>Name</span><strong>HydroFi</strong></div>
+              <div><span>Symbol</span><strong class="pill">HYFI</strong></div>
+              <div><span>Standard</span><strong>BEP-20</strong></div>
+              <div><span>Total Supply</span><strong>100,000,000,000</strong></div>
+            </div>
 
-    <!-- Liquidity -->
-    <div class="tcard">
-      <h3 class="tcard-title">Liquidity</h3>
+            <hr class="tsep">
 
-      <a class="cta" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
-        Trade on PancakeSwap
-      </a>
+            <div class="row">
+              <span class="lbl">Contract</span>
+              <div class="chips">
+                <code id="hyfi-contract" class="chip">0xc28dF9Eb…2e9</code>
+                <button id="hyfi-copy" class="iconbtn" aria-label="Copy">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                    <rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="4" y="4" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
 
-      <ul class="llinks">
-        <li><a href="https://pancakeswap.finance/info/v2/pairs/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank" rel="noreferrer">Pair (info)</a></li>
-        <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (token lock)</a></li>
-        <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (pair lock)</a></li>
-      </ul>
-    </div>
+            <div class="row">
+              <span class="lbl">Explorer</span>
+              <a class="linkbtn" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
+                View on BscScan
+              </a>
+            </div>
 
-    <!-- Founder Lock -->
-    <div class="tcard">
-      <h3 class="tcard-title">Founder Lock</h3>
-      <p class="hint">Vesting details and transparency for founders and early partners.</p>
-      <a class="linkbtn strong" href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22#code" target="_blank" rel="noreferrer">
-        FounderLocker Contract
-      </a>
-      <p class="note">Contracts are public and verifiable on-chain.</p>
-    </div>
-  </div>
-</section>
+            <div class="row">
+              <span class="lbl">Whitepaper</span>
+              <a class="linkbtn" href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noreferrer">
+                Open
+              </a>
+            </div>
+          </div>
 
+          <!-- Liquidity -->
+          <div class="tcard">
+            <h3 class="tcard-title">Liquidity</h3>
+
+            <a class="cta" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
+              Trade on PancakeSwap
+            </a>
+
+            <ul class="llinks">
+              <li><a href="https://pancakeswap.finance/info/v2/pairs/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank" rel="noreferrer">Pair (info)</a></li>
+              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (token lock)</a></li>
+              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (pair lock)</a></li>
+            </ul>
+          </div>
+
+          <!-- Founder Lock -->
+          <div class="tcard">
+            <h3 class="tcard-title">Founder Lock</h3>
+            <p class="hint">Vesting details and transparency for founders and early partners.</p>
+            <a class="linkbtn strong" href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22#code" target="_blank" rel="noreferrer">
+              FounderLocker Contract
+            </a>
+            <p class="note">Contracts are public and verifiable on-chain.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ===== /Token & Links ===== -->
 
       <section id="roadmap">
         <h2>Roadmap</h2>
@@ -192,6 +257,7 @@
         <h2>Contact</h2>
         <p>Email us at <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a>. Follow us on <a href="#">GitHub</a> and <a href="#">X</a>.</p>
       </section>
+
       <section id="whitepaper">
         <h2>Whitepaper</h2>
         <p class="muted">Read the full HydroFi whitepaper for tokenomics, mechanics, and roadmap details.</p>
@@ -201,18 +267,53 @@
       </section>
 
       <footer>
-  <div class="wrap">
-    © <span id="year"></span> HYDROFI • Built with 💧
-    • <a href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noopener">Whitepaper</a>
-    • <a href="https://x.com/HydroFi2025" target="_blank" rel="noopener" aria-label="HYFI on X (Twitter)">X</a>
-    • <a href="https://github.com/hydrofi/hydrofi-site" target="_blank" rel="noopener" aria-label="HYFI GitHub repository">GitHub</a>
-  </div>
-</footer>
-
+        <div class="wrap">
+          © <span id="year"></span> HYDROFI • Built with 💧
+          • <a href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noopener">Whitepaper</a>
+          • <a href="https://x.com/HydroFi2025" target="_blank" rel="noopener" aria-label="HYFI on X (Twitter)">X</a>
+          • <a href="https://github.com/hydrofi/hydrofi-site" target="_blank" rel="noopener" aria-label="HYFI GitHub repository">GitHub</a>
+        </div>
+      </footer>
     </main>
 
     <script>
+      // Year
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Copy in Token & Links card
+      (function () {
+        var copyBtn = document.getElementById('hyfi-copy');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function () {
+            var full = '0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9';
+            navigator.clipboard.writeText(full).then(function () {
+              copyBtn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
+              setTimeout(function () {
+                copyBtn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="4" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
+              }, 1200);
+            });
+          });
+        }
+      })();
+
+      // Copy in hero
+      (function () {
+        var heroCopy = document.getElementById('hero-copy');
+        if (heroCopy) {
+          var addr = '0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9';
+          heroCopy.addEventListener('click', function () {
+            navigator.clipboard.writeText(addr).then(function () {
+              var prev = heroCopy.textContent;
+              heroCopy.textContent = 'Copied!';
+              heroCopy.classList.add('copied');
+              setTimeout(function () {
+                heroCopy.textContent = prev;
+                heroCopy.classList.remove('copied');
+              }, 1200);
+            });
+          });
+        }
+      })();
     </script>
   </body>
 </html>
