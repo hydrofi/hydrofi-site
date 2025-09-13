@@ -28,7 +28,7 @@
       .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
       .nav{display:flex;align-items:center;justify-content:space-between;height:96px}
       .brand{display:flex;gap:1rem;align-items:center;font-weight:800;letter-spacing:.3px}
-      .brand-logo{width:72px;height:72px;display:inline-block;vertical-align:middle}
+      .brand-logo{width:72px;height:72px;display:inline-block;vertical-align:middle;object-fit:contain}
       .menu a{margin-left:18px;color:var(--ink);opacity:.85}
       .menu a:hover{opacity:1}
 
@@ -63,14 +63,6 @@
       .tcard { background:#fff; border:1px solid #d6e5ff; border-radius:14px; padding:18px; box-shadow:none; }
       .tcard-title { font-size:16px; font-weight:700; margin:0 0 10px; }
 
-      /* 2-col key:value grid */
-      .kv2 { display:grid; grid-template-columns: 1fr 1fr; gap:10px 14px; }
-      .kv2 div { display:flex; justify-content:space-between; gap:12px; }
-      .kv2 span { color:#2a5bd6; opacity:.95; font-size:.92rem; }
-      .kv2 strong { font-weight:700; }
-
-      .pill { background:#eef4ff; color:#163c8c; border:1px solid #dbe7ff; padding:.1rem .5rem; border-radius:999px; font-size:.78rem; }
-
       .tsep { border:0; height:1px; background:#e3efff; margin:10px 0; }
 
       .row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:8px 0; }
@@ -100,6 +92,13 @@
       .verified .check{ width:16px; height:16px; }
       #hero-copy{ border:1px solid var(--line); }
       #hero-copy.copied{ color:#0a7f2e; border-color:#c4efcf; background:#e9f9ef; }
+
+      /* Basic Info – minimal list (no contract/links inside) */
+      .bi-list{list-style:none;margin:0;padding:0}
+      .bi-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0}
+      .bi-label{color:#2a5bd6;font-size:.92rem;min-width:140px}
+      .bi-val{font-weight:700}
+      .bi-pill{background:#eef4ff;color:#163c8c;border:1px solid #dbe7ff;padding:.1rem .5rem;border-radius:999px;font-size:.78rem;font-weight:700}
     </style>
   </head>
 
@@ -127,7 +126,7 @@
         <h1 class="title">Pure energy of water, clean blockchain technology: <span style="color:var(--primary)">HYFI</span>.</h1>
         <p class="lead">HydroFi (HYFI) is a water-inspired crypto project. White-blue identity, focused on efficiency and transparency.</p>
 
-        <!-- HERO CTA + NEW: Copy + Verified -->
+        <!-- HERO CTA + Copy + Verified -->
         <div class="cta">
           <a class="btn primary" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener">View Token on BscScan</a>
           <a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener">Buy on PancakeSwap</a>
@@ -157,13 +156,10 @@
         <h2>HYFI & Environment</h2>
         <p><strong>HydroFi (HYFI)</strong> is a crypto project inspired by the natural power of water. Just as water enables life, HYFI brings flow, energy, and sustainability into the digital world. Our mission is to combine <strong>financial innovation</strong> with <strong>environmental responsibility</strong>:</p>
         <ul>
-          <li>♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy-efficient compared to traditional Proof-of-Work blockchains. This means a significantly smaller carbon footprint for every transaction.</li>
-          
-          <li>💧 <strong>Supporting sustainable initiatives</strong> – Part of the ecosystem’s value can be directed towards green initiatives: water purification, renewable energy, and circular economy projects.</li>
-          
-          <li>🌱 <strong>Transparency for nature and people</strong> – Just like clean water offers a clear view, HYFI ensures full transparency in transactions and project decisions.</li>
-          
-          <li>🔵 <strong>A community that cares about the future</strong> – HYFI users are not only investors – they are part of a movement that promotes sustainability, innovation, and responsible growth.</li>
+          <li>♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy-efficient compared to traditional Proof-of-Work blockchains.</li>
+          <li>💧 <strong>Supporting sustainable initiatives</strong> – Value can be directed to green initiatives: water purification, renewable energy, circular economy projects.</li>
+          <li>🌱 <strong>Transparency</strong> – Clear, auditable on-chain code and decisions.</li>
+          <li>🔵 <strong>Community</strong> – A movement that promotes sustainability, innovation, and responsible growth.</li>
         </ul>
       </section>
 
@@ -175,60 +171,26 @@
         </div>
 
         <div class="tgrid">
-          <!-- Basic Info -->
+          <!-- Basic Info (minimal) -->
           <div class="tcard">
-  <h3 class="tcard-title">Basic Info</h3>
-  <ul class="bi-list">
-    <li class="bi-row"><span class="bi-label">Name</span><span class="bi-val">HydroFi</span></li>
-    <li class="bi-row"><span class="bi-label">Symbol</span><span class="bi-val"><span class="bi-pill">HYFI</span></span></li>
-    <li class="bi-row"><span class="bi-label">Standard</span><span class="bi-val">BEP-20</span></li>
-    <li class="bi-row"><span class="bi-label">Total Supply</span><span class="bi-val">100,000,000,000</span></li>
-  </ul>
-</div>
-
-
-            <hr class="tsep">
-
-            <div class="row">
-              <span class="lbl">Contract</span>
-              <div class="chips">
-                <code id="hyfi-contract" class="chip">0xc28dF9Eb…2e9</code>
-                <button id="hyfi-copy" class="iconbtn" aria-label="Copy">
-                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-                    <rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                    <rect x="4" y="4" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="row">
-              <span class="lbl">Explorer</span>
-              <a class="linkbtn" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
-                View on BscScan
-              </a>
-            </div>
-
-            <div class="row">
-              <span class="lbl">Whitepaper</span>
-              <a class="linkbtn" href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noreferrer">
-                Open
-              </a>
-            </div>
+            <h3 class="tcard-title">Basic Info</h3>
+            <ul class="bi-list">
+              <li class="bi-row"><span class="bi-label">Name</span><span class="bi-val">HydroFi</span></li>
+              <li class="bi-row"><span class="bi-label">Symbol</span><span class="bi-val"><span class="bi-pill">HYFI</span></span></li>
+              <li class="bi-row"><span class="bi-label">Standard</span><span class="bi-val">BEP-20</span></li>
+              <li class="bi-row"><span class="bi-label">Total Supply</span><span class="bi-val">100,000,000,000</span></li>
+            </ul>
           </div>
 
           <!-- Liquidity -->
           <div class="tcard">
             <h3 class="tcard-title">Liquidity</h3>
-
             <a class="cta" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
               Trade on PancakeSwap
             </a>
-
             <ul class="llinks">
               <li><a href="https://pancakeswap.finance/info/v2/pairs/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank" rel="noreferrer">Pair (info)</a></li>
               <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (token lock)</a></li>
-              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (pair lock)</a></li>
             </ul>
           </div>
 
@@ -280,22 +242,6 @@
     <script>
       // Year
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Copy in Token & Links card
-      (function () {
-        var copyBtn = document.getElementById('hyfi-copy');
-        if (copyBtn) {
-          copyBtn.addEventListener('click', function () {
-            var full = '0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9';
-            navigator.clipboard.writeText(full).then(function () {
-              copyBtn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
-              setTimeout(function () {
-                copyBtn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="4" y="4" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
-              }, 1200);
-            });
-          });
-        }
-      })();
 
       // Copy in hero
       (function () {
