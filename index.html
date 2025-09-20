@@ -2,16 +2,15 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="assets/styles.css">
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HYDROFI • Official Website</title>
     <meta name="description" content="HydroFi (HYFI) – eco-minded crypto inspired by the power of water. White-blue, clean UI." />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+
     <style>
       :root{
         --bg:#ffffff; --ink:#0a1027; --muted:#5b6b86;
@@ -29,6 +28,13 @@
       .brand-logo{width:72px;height:72px;display:inline-block;vertical-align:middle;object-fit:contain}
       .menu a{margin-left:18px;color:var(--ink);opacity:.85}
       .menu a:hover{opacity:1}
+
+      /* Language toggle */
+      .btn-lang{
+        margin-left:16px;padding:8px 14px;border-radius:999px;border:2px solid #0d6efd;
+        background:#0d6efd;color:#fff;font-weight:700;letter-spacing:.3px;cursor:pointer;transition:.15s all;
+      }
+      .btn-lang:hover{background:#fff;color:#0d6efd}
 
       .hero{position:relative;padding:96px 0 32px;display:grid;gap:24px}
       .wave{position:absolute;inset:0 0 auto 0;height:220px;z-index:-1;background:linear-gradient(180deg,rgba(0,194,255,.08),rgba(12,109,255,.05) 60%,transparent)}
@@ -60,7 +66,6 @@
 
       .tcard { background:#fff; border:1px solid #d6e5ff; border-radius:14px; padding:18px; box-shadow:none; }
       .tcard-title { font-size:16px; font-weight:700; margin:0 0 10px; }
-
       .tsep { border:0; height:1px; background:#e3efff; margin:10px 0; }
 
       .row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:8px 0; }
@@ -108,131 +113,144 @@
           HYDROFI
         </div>
         <nav class="menu">
-          <a href="#about">About</a>
-          <a href="#environment">Environment</a>
-          <a href="#token">Token</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#environment" data-i18n="nav.environment">Environment</a>
+          <a href="#token" data-i18n="nav.token">Token</a>
+          <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
+        <button id="langToggle" class="btn-lang" type="button" aria-label="Change language">EN</button>
       </div>
     </header>
 
     <main class="wrap">
       <section class="hero">
         <div class="wave"></div>
-        <span class="badge"><span class="dot"></span> Powered by BNB Smart Chain</span>
-        <h1 class="title">Pure energy of water, clean blockchain technology: <span style="color:var(--primary)">HYFI</span>.</h1>
-        <p class="lead">HydroFi (HYFI) is a water-inspired crypto project. White-blue identity, focused on efficiency and transparency.</p>
+        <span class="badge"><span class="dot"></span> <span data-i18n="badge.powered">Powered by BNB Smart Chain</span></span>
 
-        <!-- HERO CTA + Copy + Verified -->
+        <h1 class="title" data-i18n="hero.title">
+          Pure energy of water, clean blockchain technology: <span style="color:var(--primary)">HYFI</span>.
+        </h1>
+        <p class="lead" data-i18n="hero.subtitle">
+          HydroFi (HYFI) is a water-inspired crypto project. White-blue identity, focused on efficiency and transparency.
+        </p>
+
         <div class="cta">
-          <a class="btn primary" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener">View Token on BscScan</a>
-          <a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+          <a class="btn primary" href="https://bscscan.com/token/0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener" data-i18n="hero.view">
+            View Token on BscScan
+          </a>
+          <a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noopener" data-i18n="hero.buy">
+            Buy on PancakeSwap
+          </a>
 
-          <button class="btn ghost" id="hero-copy">Copy contract</button>
+          <button class="btn ghost" id="hero-copy" data-i18n="hero.copy">Copy contract</button>
           <span class="verified">
             <svg class="check" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Verified on BscScan
+            <span data-i18n="hero.verified">Verified on BscScan</span>
           </span>
         </div>
 
         <div class="grid" style="margin-top:8px">
-          <div class="card"><div class="stat">100B</div><div class="muted">Total Supply</div></div>
-          <div class="card"><div class="stat">BEP-20</div><div class="muted">BNB Smart Chain</div></div>
-          <div class="card"><div class="stat">Anti-whale</div><div class="muted">maxTx 1% • maxWallet 2%</div></div>
+          <div class="card"><div class="stat">100B</div><div class="muted" data-i18n="cards.totalSupply">Total Supply</div></div>
+          <div class="card"><div class="stat" data-i18n="cards.bep20">BEP-20</div><div class="muted" data-i18n="cards.chain">BNB Smart Chain</div></div>
+          <div class="card"><div class="stat" data-i18n="cards.antiwhale">Anti-whale</div><div class="muted" data-i18n="cards.antiwhaleDesc">maxTx 1% • maxWallet 2%</div></div>
         </div>
       </section>
 
       <section id="about">
-        <h2>About HYFI</h2>
-        <p class="muted">HYFI combines liquidity and security with features such as transfer limits, transaction cooldowns, and founder locks. The code is transparent and designed for long-term growth.</p>
+        <h2 data-i18n="about.title">About HYFI</h2>
+        <p class="muted" data-i18n="about.text">
+          HYFI combines liquidity and security with features such as transfer limits, transaction cooldowns, and founder locks.
+          The code is transparent and designed for long-term growth.
+        </p>
       </section>
 
       <section id="environment">
-        <h2>HYFI & Environment</h2>
-        <p><strong>HydroFi (HYFI)</strong> is a crypto project inspired by the natural power of water. Just as water enables life, HYFI brings flow, energy, and sustainability into the digital world. Our mission is to combine <strong>financial innovation</strong> with <strong>environmental responsibility</strong>:</p>
+        <h2 data-i18n="env.title">HYFI & Environment</h2>
+        <p data-i18n="env.intro">
+          <strong>HydroFi (HYFI)</strong> is a crypto project inspired by the natural power of water. Just as water enables life, HYFI brings flow,
+          energy, and sustainability into the digital world. Our mission is to combine <strong>financial innovation</strong> with
+          <strong> environmental responsibility</strong>:
+        </p>
         <ul>
-          <li>♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy-efficient compared to traditional Proof-of-Work blockchains.</li>
-          <li>💧 <strong>Supporting sustainable initiatives</strong> – Value can be directed to green initiatives: water purification, renewable energy, circular economy projects.</li>
-          <li>🌱 <strong>Transparency</strong> – Clear, auditable on-chain code and decisions.</li>
-          <li>🔵 <strong>Community</strong> – A movement that promotes sustainability, innovation, and responsible growth.</li>
+          <li data-i18n="env.b1">♻️ <strong>Lower energy consumption</strong> – HYFI runs on BNB Smart Chain, which is far more energy-efficient compared to traditional Proof-of-Work blockchains.</li>
+          <li data-i18n="env.b2">💧 <strong>Supporting sustainable initiatives</strong> – Value can be directed to green initiatives: water purification, renewable energy, circular economy projects.</li>
+          <li data-i18n="env.b3">🌱 <strong>Transparency</strong> – Clear, auditable on-chain code and decisions.</li>
+          <li data-i18n="env.b4">🔵 <strong>Community</strong> – A movement that promotes sustainability, innovation, and responsible growth.</li>
         </ul>
       </section>
 
-      <!-- ===== Token & Links (clean) ===== -->
       <section id="token" class="token-clean">
         <div class="token-head">
-          <h2>Token & Links</h2>
-          <p class="hint">Everything you need at a glance.</p>
+          <h2 data-i18n="token.title">Token & Links</h2>
+          <p class="hint" data-i18n="token.hint">Everything you need at a glance.</p>
         </div>
 
         <div class="tgrid">
-          <!-- Basic Info (minimal) -->
           <div class="tcard">
-            <h3 class="tcard-title">Basic Info</h3>
+            <h3 class="tcard-title" data-i18n="token.basic">Basic Info</h3>
             <ul class="bi-list">
-              <li class="bi-row"><span class="bi-label">Name</span><span class="bi-val">HydroFi</span></li>
-              <li class="bi-row"><span class="bi-label">Symbol</span><span class="bi-val"><span class="bi-pill">HYFI</span></span></li>
-              <li class="bi-row"><span class="bi-label">Standard</span><span class="bi-val">BEP-20</span></li>
-              <li class="bi-row"><span class="bi-label">Total Supply</span><span class="bi-val">100,000,000,000</span></li>
+              <li class="bi-row"><span class="bi-label" data-i18n="token.name">Name</span><span class="bi-val">HydroFi</span></li>
+              <li class="bi-row"><span class="bi-label" data-i18n="token.symbol">Symbol</span><span class="bi-val"><span class="bi-pill">HYFI</span></span></li>
+              <li class="bi-row"><span class="bi-label" data-i18n="token.standard">Standard</span><span class="bi-val">BEP-20</span></li>
+              <li class="bi-row"><span class="bi-label" data-i18n="token.supply">Total Supply</span><span class="bi-val">100,000,000,000</span></li>
             </ul>
           </div>
 
-          <!-- Liquidity -->
           <div class="tcard">
-            <h3 class="tcard-title">Liquidity</h3>
-            <a class="cta" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer">
+            <h3 class="tcard-title" data-i18n="token.liq">Liquidity</h3>
+            <a class="cta" href="https://pancakeswap.finance/swap?outputCurrency=0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9" target="_blank" rel="noreferrer" data-i18n="token.trade">
               Trade on PancakeSwap
             </a>
             <ul class="llinks">
-              <li><a href="https://pancakeswap.finance/info/v2/pairs/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank" rel="noreferrer">Pair (info)</a></li>
-              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer">PinkLock (token lock)</a></li>
+              <li><a href="https://pancakeswap.finance/info/v2/pairs/0x9247411Ddbd75c809193d7bF1d1102f98F99A211" target="_blank" rel="noreferrer" data-i18n="token.pair">Pair (info)</a></li>
+              <li><a href="https://www.pinksale.finance/pinklock/bsc/record/1348644" target="_blank" rel="noreferrer" data-i18n="token.lock">PinkLock (token lock)</a></li>
             </ul>
           </div>
 
-          <!-- Founder Lock -->
           <div class="tcard">
-            <h3 class="tcard-title">Founder Lock</h3>
-            <p class="hint">Vesting details and transparency for founders and early partners.</p>
-            <a class="linkbtn strong" href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22#code" target="_blank" rel="noreferrer">
+            <h3 class="tcard-title" data-i18n="token.founder">Founder Lock</h3>
+            <p class="hint" data-i18n="token.vestingHint">Vesting details and transparency for founders and early partners.</p>
+            <a class="linkbtn strong" href="https://bscscan.com/address/0x96c02E4E696322b0684faBD76B3697708662BA22#code" target="_blank" rel="noreferrer" data-i18n="token.founderContract">
               FounderLocker Contract
             </a>
-            <p class="note">Contracts are public and verifiable on-chain.</p>
+            <p class="note" data-i18n="token.note">Contracts are public and verifiable on-chain.</p>
           </div>
         </div>
       </section>
-      <!-- ===== /Token & Links ===== -->
 
       <section id="roadmap">
-        <h2>Roadmap</h2>
+        <h2 data-i18n="roadmap.title">Roadmap</h2>
         <div class="grid">
-          <div class="card"><h3>Phase 1</h3><p>Deployment, community launch, code review, initial liquidity.</p></div>
-          <div class="card"><h3>Phase 2</h3><p>Partnerships, publications, documentation expansion, new tools.</p></div>
-          <div class="card"><h3>Phase 3</h3><p>Exchange listings, integrations, extended tokenomics, governance.</p></div>
+          <div class="card"><h3 data-i18n="roadmap.p1Title">Phase 1</h3><p data-i18n="roadmap.p1Desc">Deployment, community launch, code review, initial liquidity.</p></div>
+          <div class="card"><h3 data-i18n="roadmap.p2Title">Phase 2</h3><p data-i18n="roadmap.p2Desc">Partnerships, publications, documentation expansion, new tools.</p></div>
+          <div class="card"><h3 data-i18n="roadmap.p3Title">Phase 3</h3><p data-i18n="roadmap.p3Desc">Exchange listings, integrations, extended tokenomics, governance.</p></div>
         </div>
       </section>
 
       <section id="contact">
-        <h2>Contact</h2>
-        <p>Email us at <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a>. Follow us on <a href="#">GitHub</a> and <a href="#">X</a>.</p>
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.text">
+          Email us at <a href="mailto:support@hydrofi-hyfi.com">support@hydrofi-hyfi.com</a>. Follow us on <a href="#">GitHub</a> and <a href="#">X</a>.
+        </p>
       </section>
 
       <section id="whitepaper">
-        <h2>Whitepaper</h2>
-        <p class="muted">Read the full HydroFi whitepaper for tokenomics, mechanics, and roadmap details.</p>
+        <h2 data-i18n="whitepaper.title">Whitepaper</h2>
+        <p class="muted" data-i18n="whitepaper.lead">Read the full HydroFi whitepaper for tokenomics, mechanics, and roadmap details.</p>
         <div class="cta">
-          <a class="btn primary" href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noopener">Open Whitepaper</a>
+          <a class="btn primary" href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noopener" data-i18n="whitepaper.openBtn">Open Whitepaper</a>
         </div>
       </section>
 
       <footer>
         <div class="wrap">
-          © <span id="year"></span> HYDROFI • Built with 💧
-          • <a href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noopener">Whitepaper</a>
-          • <a href="https://x.com/HydroFi2025" target="_blank" rel="noopener" aria-label="HYFI on X (Twitter)">X</a>
-          • <a href="https://github.com/hydrofi/hydrofi-site" target="_blank" rel="noopener" aria-label="HYFI GitHub repository">GitHub</a>
+          <span data-i18n="footer.copy">© <span id="year"></span> HYDROFI • Built with 💧</span>
+          • <a href="whitepaper/HYFI_Whitepaper_v1.0.html" target="_blank" rel="noopener" data-i18n="footer.whitepaper">Whitepaper</a>
+          • <a href="https://x.com/HydroFi2025" target="_blank" rel="noopener" aria-label="HYFI on X (Twitter)" data-i18n="footer.x">X</a>
+          • <a href="https://github.com/hydrofi/hydrofi-site" target="_blank" rel="noopener" aria-label="HYFI GitHub repository" data-i18n="footer.github">GitHub</a>
         </div>
       </footer>
     </main>
@@ -248,8 +266,9 @@
           var addr = '0xc28dF9EbAD0D8A1E8Ab4480F3C94277d182e42e9';
           heroCopy.addEventListener('click', function () {
             navigator.clipboard.writeText(addr).then(function () {
-              var prev = heroCopy.textContent;
-              heroCopy.textContent = 'Copied!';
+              var prev = heroCopy.getAttribute('data-i18n-prev') || heroCopy.textContent;
+              heroCopy.setAttribute('data-i18n-prev', prev);
+              heroCopy.textContent = i18n.current === 'sl' ? 'Kopirano!' : 'Copied!';
               heroCopy.classList.add('copied');
               setTimeout(function () {
                 heroCopy.textContent = prev;
@@ -258,6 +277,64 @@
             });
           });
         }
+      })();
+
+      // ===== i18n (EN as fallback, SL translations below) =====
+      const i18n = (function(){
+        const LS_KEY = "hyfi.lang";
+        const btn = document.getElementById("langToggle");
+
+        const tr = {
+          sl: {
+            "nav.about":"O projektu","nav.environment":"Okolje","nav.token":"Token","nav.roadmap":"Načrt","nav.contact":"Kontakt",
+            "badge.powered":"Poganja BNB Smart Chain",
+            "hero.title":"Čista energija vode, čista blockchain tehnologija: <span style='color:var(--primary)'>HYFI</span>.",
+            "hero.subtitle":"HydroFi (HYFI) je kripto projekt, navdihnjen z vodo. Bela-modra identiteta, osredotočena na učinkovitost in transparentnost.",
+            "hero.view":"Poglej token na BscScan","hero.buy":"Kupi na PancakeSwap","hero.copy":"Kopiraj pogodbo","hero.verified":"Verificirano na BscScan",
+            "cards.totalSupply":"Skupna zaloga","cards.bep20":"BEP-20","cards.chain":"BNB Smart Chain",
+            "cards.antiwhale":"Anti-whale","cards.antiwhaleDesc":"maxTx 1% • maxWallet 2%",
+            "about.title":"O HYFI",
+            "about.text":"HYFI združuje likvidnost in varnost s funkcijami, kot so omejitve prenosov, časovni zamik med transakcijami in ključavnica za ustanovitelje. Koda je pregledna in zasnovana za dolgoročno rast.",
+            "env.title":"HYFI in okolje",
+            "env.intro":"<strong>HydroFi (HYFI)</strong> je kripto projekt, navdihnjen z naravno močjo vode. Tako kot voda omogoča življenje, HYFI v digitalni svet prinaša pretok, energijo in trajnost. Naše poslanstvo je povezati <strong>finančne inovacije</strong> z <strong>okoljsko odgovornostjo</strong>:",
+            "env.b1":"♻️ <strong>Nižja poraba energije</strong> – HYFI deluje na BNB Smart Chainu, ki je bistveno učinkovitejši od klasičnih PoW verig.",
+            "env.b2":"💧 <strong>Podpora trajnostnim pobudam</strong> – vrednost usmerjamo v zelene projekte: čiščenje vode, obnovljive vire, krožno gospodarstvo.",
+            "env.b3":"🌱 <strong>Transparentnost</strong> – jasna, preverljiva koda in odločitve na verigi.",
+            "env.b4":"🔵 <strong>Skupnost</strong> – gibanje, ki spodbuja trajnost, inovacije in odgovorno rast.",
+            "token.title":"Token in povezave","token.hint":"Vse na enem mestu.","token.basic":"Osnovni podatki",
+            "token.name":"Ime","token.symbol":"Simbol","token.standard":"Standard","token.supply":"Skupna zaloga",
+            "token.liq":"Likvidnost","token.trade":"Trguj na PancakeSwap","token.pair":"Par (info)","token.lock":"PinkLock (zaklep žetonov)",
+            "token.founder":"Zaklep ustanoviteljev","token.vestingHint":"Vesting in transparentnost za ustanovitelje in zgodnje partnerje.",
+            "token.founderContract":"Pogodba FounderLocker","token.note":"Pogodbe so javne in preverljive na verigi.",
+            "roadmap.title":"Načrt","roadmap.p1Title":"Faza 1","roadmap.p1Desc":"Objava, zagon skupnosti, pregled kode, začetna likvidnost.",
+            "roadmap.p2Title":"Faza 2","roadmap.p2Desc":"Partnerstva, objave, razširitev dokumentacije, nova orodja.",
+            "roadmap.p3Title":"Faza 3","roadmap.p3Desc":"Borzne kotacije, integracije, razširjena tokenomika, upravljanje.",
+            "contact.title":"Kontakt","contact.text":"Pišite na <a href='mailto:support@hydrofi-hyfi.com'>support@hydrofi-hyfi.com</a>. Spremljajte nas na <a href='#'>GitHub</a> in <a href='#'>X</a>.",
+            "whitepaper.title":"Whitepaper","whitepaper.lead":"Preberite celoten HydroFi whitepaper za tokenomiko, mehanike in načrt razvoja.",
+            "whitepaper.openBtn":"Odpri Whitepaper",
+            "footer.copy":"© <span id='year'></span> HYDROFI • Zgrajeno z 💧","footer.whitepaper":"Whitepaper","footer.x":"X","footer.github":"GitHub"
+          }
+        };
+
+        function apply(lang){
+          i18n.current = lang;
+          localStorage.setItem(LS_KEY, lang);
+          document.documentElement.setAttribute("lang", lang === "sl" ? "sl" : "en");
+          btn.textContent = lang.toUpperCase();
+          const dict = tr[lang] || {};
+          document.querySelectorAll("[data-i18n]").forEach(el=>{
+            const key = el.getAttribute("data-i18n");
+            if (dict[key]) el.innerHTML = dict[key];
+          });
+        }
+
+        // init
+        apply(localStorage.getItem(LS_KEY) || "en");
+
+        // toggle
+        btn.addEventListener("click", ()=>apply(i18n.current === "sl" ? "en" : "sl"));
+
+        return { current: localStorage.getItem(LS_KEY) || "en" };
       })();
     </script>
   </body>
